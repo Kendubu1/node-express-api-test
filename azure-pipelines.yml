@@ -18,5 +18,11 @@ steps:
     appType: 'webAppLinux'
     WebAppName: 'GenerealLinuxApp'
     packageForLinux: '$(Build.BinariesDirectory)/**/*.zip'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    appType: 'webApp'
+    WebAppName: 
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
     RuntimeStack: 'NODE|12-lts'
 
