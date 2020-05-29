@@ -17,5 +17,6 @@ steps:
     azureSubscription: 'Microsoft Azure Internal Consumption(fbb69af7-f9a0-4e69-ba10-b4eb445e3963)'
     appType: 'webAppLinux'
     WebAppName: 'GenerealLinuxApp'
-    packageForLinux: '$/nodejspush/models.zip'
+    packageForLinux: '$(Build.BinariesDirectory)/**/*.zip'
     RuntimeStack: 'NODE|12-lts'
+
